@@ -14,10 +14,13 @@ class MovingForward : public State, public AgentInterface {
     void during() {
         track_velocity(3,0);
         // cout << "f: " << sensor_value(0) << endl;
+
+        //emit Rotate state when front sensors approaching wall
         if ( sensor_value(0) < 25 ||  sensor_value(1) < 25){
             // cout<<"Enemy emit Rotate"<<endl;
             emit(Event(tick_name));
         }
+        //emit Rotate state when side sensors approaching wall to close
         if(sensor_value(2) <= 5 || sensor_value(3) <= 5)
             emit(Event(tick_name));
     }
@@ -29,6 +32,8 @@ class MovingForward : public State, public AgentInterface {
 class Rotating : public State, public AgentInterface {
     public:
     void entry(const Event& e) {
+        decorate("<circle x='-5' y='5' r='5' style='fill: red'></circle>");
+        label(sensor_reflection_type(0), 20, 5);
         if (sensor_value(2) > sensor_value(3)){
                 rate = 1.57;
             }else{ rate = -1.5708;}
@@ -42,7 +47,10 @@ class Rotating : public State, public AgentInterface {
             emit(Event(tick_name));
         }
     }
-    void exit(const Event& e) {}
+    void exit(const Event& e) {
+        decorate(""); 
+        clear_label();
+    }
     double rate;
     void set_tick_name(std::string s) { tick_name = s; }
     std::string tick_name;        

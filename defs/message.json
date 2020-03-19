@@ -1,0 +1,13 @@
+{
+    "name": "message",
+    "type": "noninteractive",
+    "description": "For display messages",
+    "shape": [
+        { "x": -40, "y": 10 },
+        { "x": 40, "y": 10 },
+        { "x": 40, "y": -10 },
+        { "x": -40, "y": -10 }
+    ],
+    "sensors": [],
+    "controller": "lib/message.so"
+}
