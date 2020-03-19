@@ -11,6 +11,7 @@ class PlayerController : public Process, public AgentInterface {
     PlayerController() : Process(), AgentInterface(), f(0), tau(0), firing(false) {}
 
     void init() {
+        // when each key pressd 
         watch("keydown", [&](Event &e) {
                 auto k = e.value()["key"].get<std::string>();
                 if ( k == " " && !firing ) {

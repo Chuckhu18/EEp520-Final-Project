@@ -34,6 +34,8 @@ class Rotating : public State, public AgentInterface {
     void entry(const Event& e) {
         decorate("<circle x='-5' y='5' r='5' style='fill: red'></circle>");
         // label(sensor_reflection_type(0), 20, 5);
+
+        // Turn based on side sensor whichever have more space on the maze
         if (sensor_value(2) > sensor_value(3)){
                 rate = 1.57;
             }else{ rate = -1.5708;}
@@ -42,6 +44,8 @@ class Rotating : public State, public AgentInterface {
     void during() { 
         track_velocity(-0.5,rate);  
         // cout << "r0:" << sensor_value(0) << ",r1:"<<sensor_value(1)<<",r2:"<<sensor_value(2)<<endl;
+
+        // emit forward state if there are enough space in the front
         if ( sensor_value(0) > 50 || sensor_value(1) > 50) {
             // cout<<"Enemy emit forward"<<endl;
             emit(Event(tick_name));

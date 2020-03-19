@@ -10,7 +10,8 @@ class BulletController : public Process, public AgentInterface {
     public:
     BulletController() : Process(), AgentInterface(), counter(0) {}
 
-    void init() {    
+    void init() {
+        //when enemy collision with bullet both will removed
         notice_collisions_with("Enemy", [&](Event &e) {
             remove_agent(id());
             remove_agent(e.value()["id"]);
@@ -18,6 +19,7 @@ class BulletController : public Process, public AgentInterface {
     }
     void start() {}
     void update() {
+        //bullet will be remove it doesn't hit enemy object after 20 counter
         if ( counter++ > 20 ) {
             remove_agent(id());
         }
