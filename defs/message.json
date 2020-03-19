@@ -1,6 +1,6 @@
 {
     "name": "message",
-    "type": "noninteractive",
+    "type": "static",
     "description": "For display messages",
     "shape": [
         { "x": -40, "y": 10 },
@@ -8,6 +8,12 @@
         { "x": 40, "y": -10 },
         { "x": -40, "y": -10 }
     ],
+    "friction": {
+      "collision": 5,
+      "linear": 40,
+      "rotational": 600
+    },
     "sensors": [],
+    "mass": 0, 
     "controller": "lib/message.so"
 }

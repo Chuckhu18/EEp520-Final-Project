@@ -43,11 +43,19 @@ class PlayerController : public Process, public AgentInterface {
                     tau = 0;
                 } 
         });
+        //when player hit by Enemy, player object will restart
+        notice_collisions_with("Enemy", [&](Event &e) {
+            teleport(-310,-160,1.75);
+        });
+        //when player reachs END
+        notice_collisions_with("message", [&](Event &e) {
+            label("YOU WON!!!", 0, 0);
+        });
     }
     void start() {}
     void update() {
         apply_force(f,tau);
-        label(std::to_string((int) x()) + ", " + std::to_string((int)y()),20,20);
+        // label(std::to_string((int) x()) + ", " + std::to_string((int)y()),20,20);
     }
     void stop() {}
 

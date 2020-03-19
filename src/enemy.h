@@ -33,7 +33,7 @@ class Rotating : public State, public AgentInterface {
     public:
     void entry(const Event& e) {
         decorate("<circle x='-5' y='5' r='5' style='fill: red'></circle>");
-        label(sensor_reflection_type(0), 20, 5);
+        // label(sensor_reflection_type(0), 20, 5);
         if (sensor_value(2) > sensor_value(3)){
                 rate = 1.57;
             }else{ rate = -1.5708;}
@@ -49,7 +49,7 @@ class Rotating : public State, public AgentInterface {
     }
     void exit(const Event& e) {
         decorate(""); 
-        clear_label();
+        // clear_label();
     }
     double rate;
     void set_tick_name(std::string s) { tick_name = s; }
@@ -72,9 +72,7 @@ class EnemyController : public StateMachine, public AgentInterface {
     Rotating rotating;
     std::string tick_name;
 
-    int counter;
-
-    // void init() {notice_collisions_with("Bullet", [&](Event &e) {remove_agent(id());});}
+    // void init() {}
     // void start() {}
     // void update() {}
     // void stop() {}

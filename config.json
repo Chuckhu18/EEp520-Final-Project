@@ -28,6 +28,11 @@
         {
             "definition": "defs/enemy.json",
             "style": { "fill": "blue", "stroke": "black" },
+            "position": { "x": 0, "y": 40, "theta": 3.14}
+        },
+        {
+            "definition": "defs/enemy.json",
+            "style": { "fill": "blue", "stroke": "black" },
             "position": { "x": -80, "y": 160, "theta": 3.1415 }
         },
         {
