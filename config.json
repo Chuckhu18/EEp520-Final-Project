@@ -8,17 +8,27 @@
         {
             "definition": "defs/player.json",
             "style": { "fill": "lightgreen", "stroke": "black" },
-            "position": { "x": -230, "y": -160, "theta": 0 }
+            "position": { "x": -310, "y": -160, "theta": 1.5708}
         }, 
         {
             "definition": "defs/enemy.json",
             "style": { "fill": "blue", "stroke": "black" },
-            "position": { "x": -80, "y": -160, "theta": 0 }
+            "position": { "x": -80, "y": -160, "theta": 3.1415 }
         },
         {
             "definition": "defs/enemy.json",
             "style": { "fill": "blue", "stroke": "black" },
-            "position": { "x": 100, "y": -160, "theta": 0 }
+            "position": { "x": 160, "y": -160, "theta": -1.5708}
+        },
+        {
+            "definition": "defs/enemy.json",
+            "style": { "fill": "blue", "stroke": "black" },
+            "position": { "x": -80, "y": 160, "theta": 3.1415 }
+        },
+        {
+            "definition": "defs/enemy.json",
+            "style": { "fill": "blue", "stroke": "black" },
+            "position": { "x": 200, "y": 160, "theta": 3.1415 }
         }
     ],
 
@@ -133,10 +143,10 @@
         {
             "style": { "fill": "gray", "stroke": "none" },
             "shape": [
-                { "x": -260, "y": -120 },
+                { "x": -200, "y": -120 },
                 { "x": -110, "y": -120 },
                 { "x": -110, "y": -130 },
-                { "x": -260, "y": -130 }
+                { "x": -200, "y": -130 }
             ]
         },
         {
@@ -196,10 +206,19 @@
         {
             "style": { "fill": "gray", "stroke": "none" },
             "shape": [
-                { "x": 350, "y": 120 },
-                { "x": 200, "y": 120 },
-                { "x": 200, "y": 130 },
-                { "x": 350, "y": 130 }
+                { "x": 270, "y": 200 },
+                { "x": 280, "y": 200 },
+                { "x": 280, "y": -130 },
+                { "x": 270, "y": -130 }
+            ]
+        },
+        {
+            "style": { "fill": "gray", "stroke": "none" },
+            "shape": [
+                { "x": -270, "y": -200 },
+                { "x": -280, "y": -200 },
+                { "x": -280, "y": 130 },
+                { "x": -270, "y": 130 }
             ]
         }
     ]

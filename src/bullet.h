@@ -10,7 +10,11 @@ class BulletController : public Process, public AgentInterface {
     public:
     BulletController() : Process(), AgentInterface(), counter(0) {}
 
-    void init() {             
+    void init() {    
+        notice_collisions_with("Enemy", [&](Event &e) {
+            remove_agent(id());
+            remove_agent(e.value()["id"]);
+        });          
     }
     void start() {}
     void update() {

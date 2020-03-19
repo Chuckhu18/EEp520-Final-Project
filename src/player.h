@@ -12,7 +12,6 @@ class PlayerController : public Process, public AgentInterface {
 
     void init() {
         watch("keydown", [&](Event &e) {
-            // if ( e.value()["client_id"] == get_client_id() ) {
                 auto k = e.value()["key"].get<std::string>();
                 if ( k == " " && !firing ) {
                     Agent& bullet = add_agent("Bullet", 
@@ -31,10 +30,8 @@ class PlayerController : public Process, public AgentInterface {
                 } else if ( k == "d" ) {
                     tau = magnitude;
                 } 
-            // }
         });
-        watch("keyup", [&](Event &e) {
-            // if ( e.value()["client_id"] == get_client_id() ) {            
+        watch("keyup", [&](Event &e) {           
                 auto k = e.value()["key"].get<std::string>();
                 if ( k == " " ) {
                     firing = false;
@@ -45,7 +42,6 @@ class PlayerController : public Process, public AgentInterface {
                 } else if ( k == "d" ) {
                     tau = 0;
                 } 
-            // }
         });
     }
     void start() {}
@@ -64,7 +60,6 @@ class PlayerController : public Process, public AgentInterface {
                    {"strokeWidth", "5px"},
                    {"strokeOpacity", "0.25"}
                };
-
 };
 
 class Player : public Agent {

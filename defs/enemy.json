@@ -16,18 +16,23 @@
   "sensors": [
     { 
       "type": "range",
-      "location": { "x": 12, "y": 0 },
+      "location": { "x": 7.8, "y": -8 },
+      "direction": 0
+    },
+    { 
+      "type": "range",
+      "location": { "x": 7.8, "y": 8 },
       "direction": 0
     },
     { 
         "type": "range",
-        "location": { "x": -8, "y": 12 },
-        "direction": 1.57
+        "location": { "x": -2, "y": 7.8 },
+        "direction": 1.5708
     } ,
     { 
         "type": "range",
-        "location": { "x": -8, "y": -12 },
-        "direction": -1.57
+        "location": { "x": -2, "y": -7.8 },
+        "direction": -1.5708
     }
   ],
   "mass": 0.25,    
