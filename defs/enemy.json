@@ -1,0 +1,35 @@
+{
+  "name": "Enemy",
+  "type": "dynamic",
+  "description": "Wandering enemy",
+  "shape": [
+      { "x": -8, "y": 8 },
+      { "x": 8, "y": 8 },
+      { "x": 8, "y": -8 },
+      { "x": -8, "y": -8 }
+  ],
+  "friction": {
+    "collision": 0.5,
+    "linear": 10,
+    "rotational": 200
+  },
+  "sensors": [
+    { 
+      "type": "range",
+      "location": { "x": 12, "y": 0 },
+      "direction": 0
+    },
+    { 
+        "type": "range",
+        "location": { "x": -8, "y": 12 },
+        "direction": 1.57
+    } ,
+    { 
+        "type": "range",
+        "location": { "x": -8, "y": -12 },
+        "direction": -1.57
+    }
+  ],
+  "mass": 0.25,    
+  "controller": "lib/enemy.so"
+}

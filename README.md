@@ -6,7 +6,7 @@ Using docker container to mount on local drive.
 To start a Docker container with ENVIRO pre-loaded into it, do:
 
 ```bash
-docker run -p80:80 -p8765:8765 -v $PWD:/source -it klavins/enviro:alpha bash
+docker run -p80:80 -p8765:8765 -v $PWD:/source -it klavins/enviro:v1.61 bash
 esm start
 ```
 

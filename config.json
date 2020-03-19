@@ -1,18 +1,32 @@
 {
-
     "name": "My Enviro Project",
     "ip": "0.0.0.0",
     "port": 8765,
+    "buttons": [],
 
     "agents": [
         {
-            "definition": "defs/my_robot.json",
+            "definition": "defs/player.json",
             "style": { "fill": "lightgreen", "stroke": "black" },
-            "position": {
-                "x": -230, 
-                "y": -160, 
-                "theta": 0
-            }
+            "position": { "x": -230, "y": -160, "theta": 0 }
+        }, 
+        {
+            "definition": "defs/enemy.json",
+            "style": { "fill": "blue", "stroke": "black" },
+            "position": { "x": -80, "y": -160, "theta": 0 }
+        },
+        {
+            "definition": "defs/enemy.json",
+            "style": { "fill": "blue", "stroke": "black" },
+            "position": { "x": 100, "y": -160, "theta": 0 }
+        }
+    ],
+
+    "references": [
+        {
+            "definition": "defs/bullet.json",
+            "style": { "fill": "yellow", "stroke": "black" },
+            "position": { "x": 0, "y": 0, "theta": 0 }
         }
     ],
 
