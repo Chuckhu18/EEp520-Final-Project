@@ -46,5 +46,7 @@ This project was built based on [enviro](https://github.com/klavinslab/enviro#do
 Methods used:
 - Manipulation of multiple agents and sensors
 - Collision handlers
-- Keyboard events
+- Keyboard events for movement
+- Teleporting when collision with objects
 - Agent creation and removal by using collision handlers
+- Simple algorithm for for wandering object
