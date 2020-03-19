@@ -4,7 +4,7 @@ Final project of Software Engineering For Embedded Applications
 
 Game intoduction
 ---
-This a Maze and Tank combined game. use `a`,`s`,`d`,`w` for movement, and `space` for shooting blue enemy.
+This is a Maze and Tank combined game. use `a`,`s`,`d`,`w` for movement, and `space` for shooting blue enemy.
 The goal of the game is to kill enemys and find way out.
 
 Get started to run the program
@@ -41,3 +41,9 @@ You can press `Ctrl-C` to stop the enviro server.
 Acknowedges
 ---
 This project was built based on [enviro](https://github.com/klavinslab/enviro#dockerhub-images) system by Professor Eric Klavins.
+
+Methods used:
+- Manipulation of multiple agents and sensors
+- Collision handlers
+- Keyboard events
+- Agent creation and removal by using collision handlers
