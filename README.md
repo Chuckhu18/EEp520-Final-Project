@@ -4,7 +4,11 @@ Course of Software Engineering For Embedded Applications
 
 Game intoduction
 ---
+This a Maze and Tank combined game. use `a`,`s`,`d`,`w` for movement, and `space` for shooting blue enemy.
+The goal of the game is to kill enemys and find way out.
 
+Get started to run the program
+---
 Using docker container to mount on local drive.
 To start a Docker container with ENVIRO pre-loaded into it, do:
 
@@ -30,6 +34,6 @@ make
 enviro
 ```
 
-Then navigate to `http://localhost` you should see a rectangular walled area. 
+Then navigate to `http://localhost` you should see a maze and your tank poped up. 
 
 You can press `Ctrl-C` to stop the enviro server. 
