@@ -1,6 +1,6 @@
 # EEp520-Final-Project
 
-Course of Software Engineering For Embedded Applications
+Final project of Software Engineering For Embedded Applications
 
 Game intoduction
 ---
@@ -20,7 +20,7 @@ esm start
 The above commands do the following:
 
 - The `-p80:80 option maps *port* 80 from the Docker container to ports on your host computer. This should allow you to go to 
-    > http://localhost
+    > [http://localhost](http://localhost)
     with your web browser and see the ENVIRO client. It should say "Error: Failed to fetch. Is the server running?" at this point. 
 
 - The `-p8765:8765` option allows the ENVIRO client to communicate with the `enviro` server (not yet running) via a *WebSocket*.
@@ -34,6 +34,10 @@ make
 enviro
 ```
 
-Then navigate to `http://localhost` you should see a maze and your tank poped up. 
+Then navigate to [http://localhost](http://localhost) you should see a maze and your tank poped up. 
 
 You can press `Ctrl-C` to stop the enviro server. 
+
+Acknowedges
+---
+This project was built based on [enviro](https://github.com/klavinslab/enviro#dockerhub-images) system by Professor Eric Klavins.
