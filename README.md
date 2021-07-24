@@ -7,7 +7,7 @@ Game intoduction
 This is a Maze and Tank combined game. use `a`,`s`,`d`,`w` for movement, and `space` for shooting blue enemy.
 The goal of the game is to kill enemys and find a way out.
 You will respawn if you hit by enemys.
-![alt text](https://github.com/ChuckHu18/EEp520-Final-Project/Tank_Maze.png?raw=true)
+![alt text](https://github.com/ChuckHu18/EEp520-Final-Project/blob/master/Tank_Maze.png?raw=true)
 
 
 Get started to run the program
